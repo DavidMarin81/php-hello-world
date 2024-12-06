@@ -1,0 +1,22 @@
+name: PHP CI
+
+on:
+  push: # Se ejecuta cada vez que se haga un push a la rama main
+    branches:
+      - main
+
+jobs:
+  php-test:
+    runs-on: ubuntu-latest # Usa un runner con ubuntu
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3 # Descarga el código del repositorio
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2 # Configura el entorno PHP
+        with:
+          php-version: '8.1'
+
+      - name: Run PHP script # Ejecuta el script PHP con el comando php index.php
+        run: php index.php
