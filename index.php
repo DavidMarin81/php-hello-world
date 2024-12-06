@@ -8,5 +8,6 @@
 <body>
     <h1><?php echo "Hello world from PHP to Github Actions"; ?></h1>
     <p>Fecha actual: <?php echo date('d-m-Y'); ?></p>
+    <p>Actualizado correctamente</p>
 </body>
 </html>
